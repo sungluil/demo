@@ -4,6 +4,8 @@ import com.example.demo.repository.MybatisRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.List;
+
 @Controller
 public class MainController {
 
@@ -13,8 +15,12 @@ public class MainController {
         this.mybatisRepository = mybatisRepository;
     }
 
-    @GetMapping("/index")
-    public void index() throws Exception {
-        mybatisRepository.findAll();
+    @GetMapping("/abst")
+    public String index() throws Exception {
+        List<BoardMybatis> all = mybatisRepository.findAll();
+        for (BoardMybatis a : all) {
+            System.out.println(a.getId() + ", "+ a.getName());
+        }
+        return "hello";
     }
 }
