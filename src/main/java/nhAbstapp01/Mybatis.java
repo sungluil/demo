@@ -1,14 +1,14 @@
-package com.example.demo.config;
+package nhAbstapp01;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 
-@Configuration
+@Component
 public class Mybatis {
 
     @Bean
@@ -16,7 +16,7 @@ public class Mybatis {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource);
         factoryBean.setConfigLocation(applicationContext.getResource("classpath:/config/mybatis/mybatis-config.xml"));
-        factoryBean.setMapperLocations(applicationContext.getResources("classpath:/mapper/query/*_mapper.xml"));
+        factoryBean.setMapperLocations(applicationContext.getResources("classpath:/mapper/*_mapper.xml"));
         return factoryBean.getObject();
 
     }

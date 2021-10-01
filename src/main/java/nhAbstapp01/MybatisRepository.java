@@ -1,12 +1,10 @@
-package com.example.demo.repository;
+package nhAbstapp01;
 
-import com.example.demo.BoardMybatis;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
+
 @Mapper
 public interface MybatisRepository {
 

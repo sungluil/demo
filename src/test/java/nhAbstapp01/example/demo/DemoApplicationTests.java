@@ -1,4 +1,4 @@
-package com.example.demo;
+package nhAbstapp01.example.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,5 @@
-package com.example.demo;
+package nhAbstapp01;
 
-import com.example.demo.repository.MybatisRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -15,12 +14,16 @@ public class MainController {
         this.mybatisRepository = mybatisRepository;
     }
 
+    @GetMapping("/index")
+    public String index() {
+        return "hello";
+    }
+
     @GetMapping("/abst")
-    public String index() throws Exception {
+    public void main() throws Exception {
         List<BoardMybatis> all = mybatisRepository.findAll();
         for (BoardMybatis a : all) {
             System.out.println(a.getId() + ", "+ a.getName());
         }
-        return "hello";
     }
 }

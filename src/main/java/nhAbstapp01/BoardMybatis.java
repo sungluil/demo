@@ -1,4 +1,4 @@
-package com.example.demo;
+package nhAbstapp01;
 
 public class BoardMybatis {
     private String id;
