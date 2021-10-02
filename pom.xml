@@ -18,6 +18,18 @@
     <properties>
         <java.version>11</java.version>
     </properties>
+    <distributionManagement>
+        <repository>
+            <id>release</id>
+            <url>https://github.com/sungluil/demo.git/raw/master/releases</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>snapshot</id>
+            <url>https://github.com/sungluil/demo.git/raw/master/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -99,7 +111,10 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
             <version>2.5.0</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
 
 
 

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import javax.sql.DataSource;
 
 @Component
-public class Mybatis {
+public class MybatisConfig {
 
     @Bean
     public SqlSessionFactory sqlSessionFactory(ApplicationContext applicationContext, DataSource dataSource) throws Exception {
